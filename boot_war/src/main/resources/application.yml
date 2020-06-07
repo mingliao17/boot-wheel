@@ -1,0 +1,4 @@
+server:
+  port: 1973
+  servlet:
+    context-path: /war

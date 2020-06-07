@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">mingliao</title>
+    <link th:href="@{/plugin/layui/css/layui.css}" rel="stylesheet">
+    <script type="text/javascript" rel=“stylesheet” th:src="@{/js/jquery-1.9.1.min.js}"></script>
+    <script type="text/javascript" rel=“stylesheet” th:src="@{/plugin/layui/layui.js}"></script>
+    <script type="text/javascript" rel=“stylesheet” th:src="@{/plugin/common/html5.min.js}"></script>
+    <script type="text/javascript" rel=“stylesheet” th:src="@{/plugin/common/respond.min.js}"></script>
+</head>
+<body>
+<div layout:fragment="content" id="content" ></div>
+</body>
+</html>

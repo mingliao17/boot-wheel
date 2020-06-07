@@ -1,0 +1,46 @@
+server:
+  port: 1937
+
+spring:
+  application:
+    name: backstage
+  thymeleaf:
+    cache: false #在这关闭模板引擎缓存，修改html后按shift+f9页面就会刷新
+    mode: LEGACYHTML5 #LEGACYHTML5是非严格的thymeleaf格式，
+  datasource:
+    name: local-mysql
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/world?useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true #指定字符的编码、解码为utf-8;开启批处理
+    username: root
+    password: password.m
+    type: com.alibaba.druid.pool.DruidDataSource #默认连接池HikariCP修改为druid
+    druid: #/druid/index.html
+      initial-size: 5   #初始化连接个数
+      min-idle: 5       #最小空闲连接个数
+      max-active: 20    #最大连接个数
+      max-wait: 60000    #获取连接时最大等待时间，单位毫秒。
+      time-between-eviction-runs-millis: 60000  #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      min-evictable-idle-time-millis: 30000     #配置一个连接在池中最小生存的时间，单位是毫秒
+      test-on-borrow: false        #申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+      test-while-idle: true
+      test-on-return: false        #归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能
+      validation-query: select 1 from dual #用来检测连接是否有效的sql
+      pool-prepared-statements: false #是否缓存preparedStatement，也就是PSCache。PSCache对支持游标的数据库性能提升巨大，比如说oracle。在mysql下建议关闭。
+      max-pool-prepared-statement-per-connection-size: -1 #要启用PSCache，必须配置大于0，当大于0时，poolPreparedStatements自动触发修改为true。在Druid中，不会存在Oracle下PSCache占用内存过多的问题，可以把这个数值配置大一些，比如说100
+      filters: stat,wall #通过别名的方式配置扩展插件，常用的插件有：监控统计用的filter:stat，日志用的filter:log4j，防御sql注入的filter:wall
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000 #通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      stat-view-servlet: #druid页面的用户信息
+        url-pattern: /druid/*
+        login-username: backstage
+        login-password: password.druid
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

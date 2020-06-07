@@ -9,21 +9,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @CreateTime: 2020/5/20 21:51
  * @Descrption: change_the_world
  */
-@RequestMapping("/page")
 @Controller
 public class IndexController {
 
-    @GetMapping("/welcome-1")
+    @GetMapping("/index")
+    public String index(){
+        return "/index";
+    }
+
+    @GetMapping("/page/welcome-1")
     public String one(){
         return "/page/welcome-1";
     }
 
-    @GetMapping("/welcome-2")
+    @GetMapping("/page/welcome-2")
     public String two(){
         return "/page/welcome-2";
     }
 
-    @GetMapping("/welcome-3")
+    @GetMapping("/page/welcome-3")
     public String three(){
         return "/page/welcome-3";
     }

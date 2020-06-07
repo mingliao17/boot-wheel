@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/common_head}">
+<head>
+    <title>古诗列表页</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <div class="layui-inline">
+        <label class="layui-form-label">诗词名称</label>
+        <div class="layui-input-block">
+            <input id="poemName" class="layui-input" type="text" placeholder="诗词名称"/>
+        </div>
+    </div>
+    <div class="layui-inline">
+        <label class="layui-form-label">作者</label>
+        <div class="layui-input-block">
+            <input id="author" class="layui-input" type="text" placeholder="作者"/>
+        </div>
+    </div>
+    <div class="layui-inline">
+        <label class="layui-form-label">朝代</label>
+        <div class="layui-input-block">
+            <input id="dynasty" class="layui-input" type="text" placeholder="朝代"/>
+        </div>
+    </div>
+
+    <div style="float: right">
+        <div class="layui-inline">
+            <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
+        </div>
+        <div class="layui-inline">
+            <button id="btnAdd" class="layui-btn icon-btn"><i class="layui-icon">&#xe624;</i>新增</button>
+        </div>
+        <div class="layui-inline">
+            <button id="btnUpdate" class="layui-btn icon-btn"><i class="layui-icon">&#xe642;</i>修改</button>
+        </div>
+        <div class="layui-inline">
+            <button id="btnDel" class="layui-btn icon-btn"><i class="layui-icon">&#xe640;</i>删除</button>
+        </div>
+        <div class="layui-inline">
+            <button id="btnExport" class="layui-btn icon-btn"><i class="layui-icon">&#xe630;</i>导出</button>
+        </div>
+    </div>
+    <table class="layui-table" id="poemTable" lay-filter="poemTable"></table>
+
+    <!--当前业务所需js-->
+    <script type="text/javascript" rel=“stylesheet” th:src="@{/js/business/poem/poem_list.js}"></script>
+</div>
+
+</body>
+</html>

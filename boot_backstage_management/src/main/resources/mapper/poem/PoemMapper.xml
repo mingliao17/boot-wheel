@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.boot_backstage_management.business.poem.mapper.PoemMapper">
+    <insert id="poemAdd">
+            insert into poem_content (poem_name,author,dynasty,poem_content) values (
+                #{poemName},
+                #{author},
+                #{dynasty},
+                #{poemContent}
+            )
+    </insert>
+
+
+    <select id="selectPoemList" resultType="java.util.Map">
+        SELECT
+            id,
+            poem_name,
+            author,
+            dynasty,
+            poem_content,
+            label,
+            translation,
+            COMMENT,
+            about_the_author
+        FROM
+            poem_content
+            where 1=1
+            <if test="poemName != null">
+                and poem_name like concat('%',#{poemName},'%')
+            </if>
+            <if test="author != null">
+                and author like  concat('%',#{author},'%')
+            </if>
+            <if test="dynasty != null">
+                and  dynasty like  concat('%',#{dynasty},'%')
+            </if>
+            <if test="poemContent != null">
+                and poem_content like  concat('%',#{poemContent},'%')
+            </if>
+    </select>
+</mapper>

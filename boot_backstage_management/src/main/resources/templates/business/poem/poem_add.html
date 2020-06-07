@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/common_head}">
+<head>
+    <title>诗词新增</title>
+</head>
+<body>
+<div layout:fragment="content" class="layui-container">
+
+    <form class="layui-form layui-form-pane" action="">
+        <div class="layui-row">
+            <div class="layui-inline layui-col-lg6">
+                <label class="layui-form-label">诗词名称</label>
+                <div class="layui-input-block">
+                    <input id="poemName" class="layui-input" type="text"/>
+                </div>
+                <div class="layui-inline layui-col-lg6">
+                    <label class="layui-form-label">作者</label>
+                    <div class="layui-input-block">
+                        <input id="author" class="layui-input" type="text"/>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-row">
+                <div class="layui-inline layui-col-lg6">
+                    <label class="layui-form-label">朝代</label>
+                    <div class="layui-input-block">
+                        <input id="dynasty" class="layui-input" type="text"/>
+                    </div>
+                </div>
+                <div class="layui-inline layui-col-lg6">
+                    <label class="layui-form-label">诗词内容</label>
+                    <div class="layui-input-block">
+                        <input id="poemContent" class="layui-input" type="text"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="layui-inline layui-form-item">
+        <button id="btnAdd" class="layui-btn icon-btn" onclick="poemAdd()">确认</button>
+    </div>
+    <!--当前业务所需js-->
+    <script type="text/javascript" rel=“stylesheet” th:src="@{/js/business/poem/poem_add.js}"></script>
+</div>
+
+
+</body>
+</html>
