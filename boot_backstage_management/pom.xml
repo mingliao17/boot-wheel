@@ -12,6 +12,7 @@
     <artifactId>boot_backstage_management</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>boot_backstage_management</name>
+    <packaging>war</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -34,6 +35,12 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>-->
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!--thymeleaf-->
@@ -119,6 +126,7 @@
     </dependencies>
 
     <build>
+        <finalName>backstage</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -19,4 +19,9 @@ public class IndexController {
     public String index(){
         return "淡定，这本来就是个字符串而已";
     }
+
+    @GetMapping("/tree")
+    public String tree(){
+        return "tree";
+    }
 }
