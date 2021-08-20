@@ -12,7 +12,7 @@ class BootExceptionApplicationTests {
     @Test
     void contextLoads() {
         String m = null;
-        if(m.equals("m")){
+        if (m.equals("m")) {
             System.out.println(123);
         }
     }

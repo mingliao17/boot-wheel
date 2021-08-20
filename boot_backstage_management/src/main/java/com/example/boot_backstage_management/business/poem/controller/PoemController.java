@@ -57,37 +57,37 @@ public class PoemController {
     }
 
     @GetMapping("/turnPoemAdd")
-    public String trunPoemAdd(){
-        return init_url+"/poem_add";
+    public String trunPoemAdd() {
+        return init_url + "/poem_add";
     }
 
     @ResponseBody
     @PostMapping("/poemAdd")
-    public String poemAdd(Poem poem){
+    public String poemAdd(Poem poem) {
         poemService.poemAdd(poem);
         return "ok";
     }
 
     @GetMapping("/turnPoemUpdate")
-    public String turnPoemUpdate(){
-        return init_url+"/poem_update";
+    public String turnPoemUpdate() {
+        return init_url + "/poem_update";
     }
 
     @ResponseBody
     @PostMapping("/poemUpdate")
-    public String poemUpdate(){
+    public String poemUpdate() {
         return "";
     }
 
     @ResponseBody
     @GetMapping("/poemDel")
-    public String poemDel(){
+    public String poemDel() {
         return "";
     }
 
     @ResponseBody
     @GetMapping("/poemExport")
-    public String poemExport(){
+    public String poemExport() {
         return "";
     }
 

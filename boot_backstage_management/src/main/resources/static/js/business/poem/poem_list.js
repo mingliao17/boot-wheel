@@ -2,13 +2,12 @@ layui.use('table', function () {
     var $ = layui.$;
     var table = layui.table
 
-    var poem ={
+    var poem = {
         tableId: "poemTable",
         condition: {
             id: ""
         }
     }
-
 
 
     /**
@@ -55,7 +54,6 @@ layui.use('table', function () {
     };
 
 
-
     // 搜索按钮点击事件
     $('#btnSearch').click(function () {
         poem.search();
@@ -66,12 +64,12 @@ layui.use('table', function () {
         //弹出新增页面
         var url = "/poem/turnPoemAdd";
         layer.open({
-            type:2,
-            title:'<h4 style="font-size: 18px;padding-top: 10px">诗词新增</h4>',
-            area:['90%','80%'],
-            fixed:false,
-            maxmin:true,
-            content:url,
+            type: 2,
+            title: '<h4 style="font-size: 18px;padding-top: 10px">诗词新增</h4>',
+            area: ['90%', '80%'],
+            fixed: false,
+            maxmin: true,
+            content: url,
             end: function () {
                 poem.search();
             }
@@ -82,12 +80,12 @@ layui.use('table', function () {
     $('#btnUpdate').click(function () {
         var url = "/poem/turnPoemUpdate";
         layer.open({
-            type:2,
-            title:'<h4 style="font-size: 18px;padding-top: 10px">诗词修改</h4>',
-            area:['90%','80%'],
-            fixed:false,
-            maxmin:true,
-            content:url,
+            type: 2,
+            title: '<h4 style="font-size: 18px;padding-top: 10px">诗词修改</h4>',
+            area: ['90%', '80%'],
+            fixed: false,
+            maxmin: true,
+            content: url,
             end: function () {
                 poem.search();
             }
@@ -100,16 +98,16 @@ layui.use('table', function () {
         alert(checkStatus.data);
         alert(checkStatus.data.length);
         alert(checkStatus.data[0].poem_name);
-       /* $.ajax({
-            url: "/poem/poemDel",
-            type: "post",
-            dataType: "json",
-            // data: {'name':value},
-            async: false,
-            success: function (data) {
-                layer.alert(data.msg,{icon:1,title:'信息提示'});
-            }
-        });*/
+        /* $.ajax({
+             url: "/poem/poemDel",
+             type: "post",
+             dataType: "json",
+             // data: {'name':value},
+             async: false,
+             success: function (data) {
+                 layer.alert(data.msg,{icon:1,title:'信息提示'});
+             }
+         });*/
     });
 
     //导出点击事件

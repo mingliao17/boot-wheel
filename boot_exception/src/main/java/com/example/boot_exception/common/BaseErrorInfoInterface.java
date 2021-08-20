@@ -11,9 +11,13 @@ package com.example.boot_exception.common;
  */
 public interface BaseErrorInfoInterface {
 
-    /** 错误码*/
+    /**
+     * 错误码
+     */
     String getResultCode();
 
-    /** 错误描述*/
+    /**
+     * 错误描述
+     */
     String getResultMsg();
 }

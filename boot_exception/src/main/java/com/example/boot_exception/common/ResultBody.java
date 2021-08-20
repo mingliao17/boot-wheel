@@ -71,6 +71,7 @@ public class ResultBody {
 
     /**
      * 成功
+     *
      * @param data
      * @return
      */
@@ -107,7 +108,7 @@ public class ResultBody {
     /**
      * 失败
      */
-    public static ResultBody error( String message) {
+    public static ResultBody error(String message) {
         ResultBody rb = new ResultBody();
         rb.setCode("-1");
         rb.setMessage(message);

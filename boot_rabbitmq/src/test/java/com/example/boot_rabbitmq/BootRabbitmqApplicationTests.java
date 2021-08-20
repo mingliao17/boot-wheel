@@ -13,7 +13,7 @@ class BootRabbitmqApplicationTests {
 
     @Test
     void contextLoads() {
-        rabbitTemplate.convertAndSend("hello","hello world");
+        rabbitTemplate.convertAndSend("hello", "hello world");
     }
 
 }

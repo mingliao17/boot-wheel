@@ -9,7 +9,7 @@ package com.example.boot_exception.common;
 /**
  * 自定义一个异常类，用于处理我们发生的业务异常。
  */
-public class BizException extends Exception{
+public class BizException extends Exception {
 
     private static final long serialVersionUID = 1L;
 

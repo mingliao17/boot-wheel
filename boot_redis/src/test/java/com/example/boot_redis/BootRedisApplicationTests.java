@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 class BootRedisApplicationTests {
 
     @Autowired
-    private RedisTemplate<String,String> redisTemplate;
+    private RedisTemplate<String, String> redisTemplate;
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
@@ -23,16 +23,16 @@ class BootRedisApplicationTests {
     @Test
     void contextLoads() {
         log.info("为人所不为，这本身就是进步！");
-        redisTemplate.opsForValue().set("mingliao","但是你要先为了再说2！",18000);
-        redisTemplate.opsForValue().getAndSet("mingliao","但是你要先为了再说3！");
-        String value  = (String) redisTemplate.opsForValue().get("mingliao");
-        log.info("value="+value);
+        redisTemplate.opsForValue().set("mingliao", "但是你要先为了再说2！", 18000);
+        redisTemplate.opsForValue().getAndSet("mingliao", "但是你要先为了再说3！");
+        String value = (String) redisTemplate.opsForValue().get("mingliao");
+        log.info("value=" + value);
         log.info(String.valueOf(redisTemplate.hasKey("mingliao")));
     }
 
 
     @Test
-    void StringTest(){
+    void StringTest() {
         log.info(stringRedisTemplate.opsForValue().get("mingliao"));
     }
 

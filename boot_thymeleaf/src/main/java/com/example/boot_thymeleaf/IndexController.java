@@ -13,22 +13,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 
     @GetMapping("/index")
-    public String index(){
+    public String index() {
         return "/index";
     }
 
     @GetMapping("/page/welcome-1")
-    public String one(){
+    public String one() {
         return "/page/welcome-1";
     }
 
     @GetMapping("/page/welcome-2")
-    public String two(){
+    public String two() {
         return "/page/welcome-2";
     }
 
     @GetMapping("/page/welcome-3")
-    public String three(){
+    public String three() {
         return "/page/welcome-3";
     }
 }

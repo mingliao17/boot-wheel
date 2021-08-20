@@ -25,12 +25,12 @@ class BootBackstageManagementApplicationTests {
     }
 
     @Test
-    void testPoemSelect(){
-        Page pageBefore = PageHelper.startPage(1,5);
+    void testPoemSelect() {
+        Page pageBefore = PageHelper.startPage(1, 5);
         Poem p = new Poem();
         p.setPoemName("秋");
         List<Map> poemList = poemMapper.selectPoemList(p);
-        for(Map m : poemList){
+        for (Map m : poemList) {
             System.out.println(m.values());
         }
     }

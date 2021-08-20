@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class HelloConsumer {
 
     @RabbitHandler
-    public void recevice1(String message){
-        System.out.println("message"+message);
+    public void recevice1(String message) {
+        System.out.println("message" + message);
     }
 }

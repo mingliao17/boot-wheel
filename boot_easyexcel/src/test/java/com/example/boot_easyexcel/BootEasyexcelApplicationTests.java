@@ -26,7 +26,7 @@ class BootEasyexcelApplicationTests {
      * 读取excel信息
      */
     @Test
-    void readExcel(){
+    void readExcel() {
         System.out.println(123);
     }
 
@@ -34,7 +34,7 @@ class BootEasyexcelApplicationTests {
      * 简单的写文件信息
      */
     @Test
-    void writeExcel(){
+    void writeExcel() {
         try (OutputStream out = new FileOutputStream("withHead.xlsx");) {
             ExcelWriter writer = new ExcelWriter(out, ExcelTypeEnum.XLSX);
             Sheet sheet1 = new Sheet(1, 0);
@@ -74,7 +74,7 @@ class BootEasyexcelApplicationTests {
      * 写文件信息，使用注解做表头
      */
     @Test
-    void writeExcelHead(){
+    void writeExcelHead() {
         try (OutputStream out = new FileOutputStream("withHead.xlsx");) {
             ExcelWriter writer = new ExcelWriter(out, ExcelTypeEnum.XLSX);
             Sheet sheet1 = new Sheet(1, 0, Staff.class);
@@ -82,10 +82,10 @@ class BootEasyexcelApplicationTests {
             List<Staff> data = new ArrayList<>();
             for (int i = 0; i < 100; i++) {
                 Staff item = new Staff();
-                item.setId("id"+i);
-                item.setName("name"+i);
-                item.setPhone("phone"+i);
-                item.setSex("sex"+i);
+                item.setId("id" + i);
+                item.setName("name" + i);
+                item.setPhone("phone" + i);
+                item.setSex("sex" + i);
                 data.add(item);
             }
             writer.write(data, sheet1);

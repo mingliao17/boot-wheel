@@ -16,7 +16,7 @@ public class IndexController {
 
     @GetMapping("/")
     @ResponseBody
-    public String index(){
+    public String index() {
         return "淡定，这本来就是个字符串而已";
     }
 

@@ -1,0 +1,10 @@
+nacos:
+  config:
+    server-addr: 116.196.124.0
+    bootstrap:
+      enable: true
+      log-enable: true
+    data-ids: application_dev;system_config
+    type: YAML
+    group: DEFAULT_GROUP
+    namespace: hx_space
