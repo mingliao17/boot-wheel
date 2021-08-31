@@ -45,9 +45,17 @@ public class ReloadDroolsRules {
 
     private void loadDBRules(String drlName, KieFileSystem kfs) {
         //        String path = "src/main/resources/rules/address.drl";
-        String path = "src/main/resources/"+ DroolsAutoConfig.RULES_PATH + "/"+ drlName + ".drl";
+        String path = "src/main/resources/"+ DroolsAutoConfig.RULES_PATH + drlName + ".drl";
         // 从数据库加载的规则
-        kfs.write(path, "package plausibcheck.adress\n\n import com.neo.drools.model.Address;\n import com.neo.drools.model.fact.AddressCheckResult;\n\n rule \"Postcode 6 numbers\"\n\n    when\n  then\n        System.out.println(\"打印日志：更新rules成功!\");\n end");
+        kfs.write(path,
+                "package plausibcheck.adress\n\n " +
+                        "import xyz.mingliao.boot-wheel.model.Address;\n " +
+                        "import xyz.mingliao.boot-wheel.model.fact.AddressCheckResult;\n\n " +
+                        "rule \"Postcode 6 numbers\"\n\n    " +
+                        "when\n  " +
+                        "then\n        " +
+                        "System.out.println(\"打印日志：更新rules成功!\");\n " +
+                        "end");
     }
 
     private void loadFileRules(String drlName, KieFileSystem kfs) throws IOException{

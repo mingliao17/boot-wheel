@@ -1,9 +1,9 @@
 package com.rules
 import java.util.Date
 import java.util.List
-import com.neo.drools.model.Server
+import xyz.mingliao.boot_drools.model.Server
 
-global com.neo.drools.model.fact.ResultEvent event
+global xyz.mingliao.boot_drools.model.fact.ResultEvent event
 
 rule "timerTest"
     timer (cron:0/1 * * * * ?)

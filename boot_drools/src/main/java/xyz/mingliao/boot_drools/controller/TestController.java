@@ -56,6 +56,12 @@ public class TestController {
 
     }
 
+    /**
+     * 重载规则
+     * @param drlName，这里的传值必须有相应的规则名称
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/reload")
     public String reload(String drlName) throws Exception {
         rules.reload(drlName);

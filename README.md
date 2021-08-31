@@ -3,10 +3,12 @@
 
 
 - boot_axis2
-> 集成webservice服务，努力中...
+> 集成webservice服务
 - boot_backstage_management
 > 集成各项基础服务，做一个简单的后台管理脚手架
 > 目前只集成了基础的curd
+- boot_drools
+> 入门drools规则引擎组件，实现drl文件热部署,灵活获取规则配置
 - boot_elasticsearch
 > 集成elasticsearch全文检索服务，努力中...
 - boot_easyexcel

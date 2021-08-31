@@ -1,7 +1,7 @@
 package plausibcheck.AddressTest
 
-import com.neo.drools.model.Address;
-import com.neo.drools.model.fact.AddressCheckResult;
+import xyz.mingliao.boot_drools.model.Address;
+import xyz.mingliao.boot_drools.model.fact.AddressCheckResult;
 
 rule "[Address-Test]"
 agenda-group "address-test"
