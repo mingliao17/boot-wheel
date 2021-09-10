@@ -19,11 +19,11 @@
 > 集成ampq协议消息队列，目前只做了配置服务和一个基础的测试类
 - boot_redis
 > 集成缓存服务，目前只做了配置服务和一个基础的测试类
-- boot_starter_mingliao
+- ~~boot_starter_mingliao~~
 > 实现一个自定义的starter
-- boot_starter_mingliao_implement
+- ~~boot_starter_mingliao_implement~~
 > 引入自己的自定义starter，调用相应的方法实现相应的逻辑操作
-- boot_thymeleaf
+- ~~boot_thymeleaf~~
 > 集成泰姆利弗模板引擎，目前只加了一个layuimini的前端写好的架子
-- boot_war
+- ~~boot_war~~
 > 剔除tomcat、打war包
