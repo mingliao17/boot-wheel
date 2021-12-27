@@ -26,4 +26,4 @@
 - ~~boot_thymeleaf~~
 > 集成泰姆利弗模板引擎，目前只加了一个layuimini的前端写好的架子
 - ~~boot_war~~
-> 剔除tomcat、打war包
+> 剔除tomcat、打war包,在war包下日志的配置还需要做相应的调整
